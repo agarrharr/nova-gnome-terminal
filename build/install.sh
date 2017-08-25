@@ -9,22 +9,22 @@ gnome_color () {
     echo "#${AA}${AA}${BB}${BB}${CC}${CC}"
 }
 
-COLOR_01='rgb(60, 76, 85)'           # HOST
-COLOR_02='rgb(223, 140, 140)'             # SYNTAX_STRING
+COLOR_01='rgb(60, 76, 85)'              # HOST
+COLOR_02='rgb(223, 140, 140)'           # SYNTAX_STRING
 COLOR_03='rgb(168, 206, 147)'           # COMMAND
-COLOR_04='rgb(218, 218, 147)'          # COMMAND_COLOR2
-COLOR_05='rgb(131, 175, 229)'            # PATH
-COLOR_06='rgb(154, 147, 225)'         # SYNTAX_VAR
-COLOR_07='rgb(127, 193, 202)'            # PROMPT
+COLOR_04='rgb(218, 218, 147)'           # COMMAND_COLOR2
+COLOR_05='rgb(131, 175, 229)'           # PATH
+COLOR_06='rgb(154, 147, 225)'           # SYNTAX_VAR
+COLOR_07='rgb(127, 193, 202)'           # PROMPT
 COLOR_08='rgb(197, 212, 221)'           #
 
 COLOR_09='rgb(137, 155, 166)'           #
-COLOR_10='rgb(242, 195, 143)'             # COMMAND_ERROR
+COLOR_10='rgb(242, 195, 143)'           # COMMAND_ERROR
 COLOR_11='rgb(168, 206, 147)'           # EXEC
-COLOR_12='rgb(218, 218, 147)'          #
-COLOR_13='rgb(131, 175, 229)'            # FOLDER
-COLOR_14='rgb(209, 142, 194)'         #
-COLOR_15='rgb(127, 193, 202)'            #
+COLOR_12='rgb(218, 218, 147)'           #
+COLOR_13='rgb(131, 175, 229)'           # FOLDER
+COLOR_14='rgb(209, 142, 194)'           #
+COLOR_15='rgb(127, 193, 202)'           #
 COLOR_16='rgb(230, 238, 243)'           #
 
 BACKGROUND_COLOR=$(gnome_color '#3C4C55')
