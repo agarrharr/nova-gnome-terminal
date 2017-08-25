@@ -1,6 +1,6 @@
-# gnome-terminal-nova
+# nova-gnome-terminal
 
-Nova color scheme plugin for Gnome Terminal
+Nova color scheme plugin for GNOME Terminal
 
 ## Installation
 
