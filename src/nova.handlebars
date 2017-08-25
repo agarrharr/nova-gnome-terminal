@@ -1,7 +1,6 @@
 #!/bin/bash
 
 gnome_color () {
-
     AA=${1:1:2}
     BB=${1:3:2}
     CC=${1:5:2}
@@ -9,35 +8,27 @@ gnome_color () {
     echo "#${AA}${AA}${BB}${BB}${CC}${CC}"
 }
 
-# {{normal.black}}
-# {{normal.red}}
-# {{normal.green}}
-# {{normal.yellow}}
-# {{normal.blue}}
-# {{bright.magenta}}
-# {{normal.cyan}}
-# {{bright.white}}
-COLOR_01=""           # HOST
-COLOR_02=""           # SYNTAX_STRING
-COLOR_03=""           # COMMAND
-COLOR_04=""           # COMMAND_COLOR2
-COLOR_05=""           # PATH
-COLOR_06=""           # SYNTAX_VAR
-COLOR_07=""           # PROMP
-COLOR_08=""           #
+COLOR_01='{{ansiGroups.normal.black}}'           # HOST
+COLOR_02='{{ansiGroups.normal.red}}'             # SYNTAX_STRING
+COLOR_03='{{ansiGroups.normal.green}}'           # COMMAND
+COLOR_04='{{ansiGroups.normal.yellow}}'          # COMMAND_COLOR2
+COLOR_05='{{ansiGroups.normal.blue}}'            # PATH
+COLOR_06='{{ansiGroups.normal.magenta}}'         # SYNTAX_VAR
+COLOR_07='{{ansiGroups.normal.cyan}}'            # PROMPT
+COLOR_08='{{ansiGroups.normal.white}}'           #
 
-COLOR_09=""           #
-COLOR_10=""           # COMMAND_ERROR
-COLOR_11=""           # EXEC
-COLOR_12=""           #
-COLOR_13=""           # FOLDER
-COLOR_14=""           #
-COLOR_15=""           #
-COLOR_16=""           #
+COLOR_09='{{ansiGroups.bright.black}}'           #
+COLOR_10='{{ansiGroups.bright.red}}'             # COMMAND_ERROR
+COLOR_11='{{ansiGroups.bright.green}}'           # EXEC
+COLOR_12='{{ansiGroups.bright.yellow}}'          #
+COLOR_13='{{ansiGroups.bright.blue}}'            # FOLDER
+COLOR_14='{{ansiGroups.bright.magenta}}'         #
+COLOR_15='{{ansiGroups.bright.cyan}}'            #
+COLOR_16='{{ansiGroups.bright.white}}'           #
 
-BACKGROUND_COLOR=$(gnome_color '{{normal.black}}')   # Background Color
-FOREGROUND_COLOR=$(gnome_color '{{normal.cyan}}')   # Text
-CURSOR_COLOR="$FOREGROUND_COLOR" # Cursor
+BACKGROUND_COLOR=$(gnome_color '{{uiGroups.background}}')
+FOREGROUND_COLOR=$(gnome_color '{{uiGroups.foreground}}')   # Text
+CURSOR_COLOR=$(gnome_color '{{uiGroups.userCurrentState}}') # Cursor
 
 gnomeVersion="$(expr "$(gnome-terminal --version)" : '.* \(.*[.].*[.].*\)$')"
 dircolors_checked=false
@@ -48,11 +39,9 @@ set_theme() {
   profile=$(get_uuid $1)
   profile_path=$profiles_path/$profile
 
-  # TODO: get real palette colors
-  dconf write $profile_path/palette "['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']"
+  dconf write $profile_path/palette "['${COLOR_01}', '${COLOR_02}', '${COLOR_03}', '${COLOR_04}', '${COLOR_05}', '${COLOR_06}', '${COLOR_07}', '${COLOR_08}', '${COLOR_09}', '${COLOR_10}', '${COLOR_11}', '${COLOR_12}', '${COLOR_13}', '${COLOR_14}', '${COLOR_15}', '${COLOR_16}']"
 
   # set foreground, background and highlight color
-  # TODO: set bold color
   # dconf write $profile_path/bold-color "'$SOME_COLOR'"
   dconf write $profile_path/background-color "'$BACKGROUND_COLOR'"
   dconf write $profile_path/foreground-color "'$FOREGROUND_COLOR'"
@@ -61,7 +50,7 @@ set_theme() {
   dconf write $profile_path/use-theme-colors "false"
 
   # set highlighted color to be different from foreground color
-  dconf write $profile_path/bold-color-same-as-fg "false"
+  dconf write $profile_path/bold-color-same-as-fg "true"
 }
 
 

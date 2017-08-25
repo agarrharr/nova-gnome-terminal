@@ -4,9 +4,10 @@ Nova color scheme plugin for Gnome Terminal
 
 ## Installation
 
-This is still a work in progress, but the installation, will work something like this. Just replace `Default` with the name of your profile. You can create a new profile by going to Preferences -> Profiles -> New.
+1. Download the install.sh file.
+1. Run `./install.sh Default`
 
-Run `./build/install.sh Default`
+Just replace `Default` with the name of your profile. You can create a new profile by going to Preferences -> Profiles -> New.
 
 ## Contributing
 
