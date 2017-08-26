@@ -2,6 +2,8 @@
 
 Nova color scheme plugin for GNOME Terminal
 
+![Screenshot](assets/screenshot.png)
+
 ## Installation
 
 1. Download the install.sh file.
