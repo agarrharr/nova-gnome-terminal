@@ -18,5 +18,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 ## More info
 
 **See the [documentation website](https://trevordmiller.com/projects/nova) for more information**
-
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/3owRGftAkghuGdjHaa955zEJ/agarrharr/nova-gnome-terminal'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/3owRGftAkghuGdjHaa955zEJ/agarrharr/nova-gnome-terminal.svg' /></a>
